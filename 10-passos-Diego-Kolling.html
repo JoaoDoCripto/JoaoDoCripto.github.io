@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>João Do Cripto</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+      
+    <!-- Some extra styles (remove if not needed) -->
+    <style>
+        section {
+            padding: 70px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        /* So that we can see the grid */
+        .grid-example  div[class^="col"] {
+            border: 1px solid white;
+            background: lightblue;
+            text-align: center;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            }
+        /* Overide Jumbotron's color */
+        .jumbotron {
+    background-color: lightskyblue;
+        }
+    </style>
+
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar-example">
+
+    <nav id="topNav" class="navbar navbar-full navbar-static-top navbar-dark bg-inverse">
+        <div class="container">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                &#9776;
+            </button>
+            <a class="navbar-brand" href="index.html">João Do Cripto</a>
+            <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://twitter.com/joaodocripto" target="_blank">Twitter</a>
+                    </li>
+		    <li class="nav-item">
+                        <a class="nav-link" href="https://t.me/JoaoDoCripto" target="_blank">Telegram</a>
+                    </li>
+		    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/joaodocripto/" target="_blank">Instagram</a>
+                    </li>
+
+                  </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3"><img src="imagens/jdc.png" class="img-circle" style="height: 90px" alt="João do Cripto"> João Do Cripto!</h1>
+        <p>Artigos, traduções e ideias sobre Bitcoin e Lightning Network.</p>
+        <p><a class="btn btn-primary btn-lg" href="index.html" role="button">&laquo; VOLTAR</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+
+        <section id="Artigo">
+            <h1>10 Passos por Diego Kolling</h1>
+	    <p>Junho 2022</p>
+
+            <table class="table table-bordered table-striped">
+                <tbody>
+                  <tr>
+                    <th class="text-nowrap" scope="row"><span class="tag tag-pill tag-info">Twitter</span> <a href="https://twitter.com/diegokolling/status/1532449976860680192?s=21&t=lIT4Fp1nynO6h0PGo590og" target="_blank"> Este artigo é uma adapção do Tweet original de Diego Kolling</a></th>
+                  </tr>
+                </tbody>
+            </table>
+
+		<p>Neste artigo s&atilde;o apresentados 10 passos que Diego Kolling considera essenciais para o in&iacute;cio da jornada como gestor de Node na Lightning Network.</p>
+		<p>Estes passos levam em conta que j&aacute; tenhas todo o processo anterior de instala&ccedil;&atilde;o de um sistema operativo (RaspiBlitz, Umbrel, MyNode, Citadel), sincroniza&ccedil;&atilde;o da blockchain do Bitcoin, 2FA ativado, SEED devidamente protegida e que o Node est&aacute; est&aacute;vel.</p>
+		<p>1) Lightning.Watch<br>2) Balance of Satoshis (BoS)<br>3) WT<br>4) LNDg<br>5) Nome ao node<br>6) Novos fees padr&atilde;o<br>7) Tamanho m&iacute;nimo de canal<br>8) Registrar Node no 1ml e no Amboss<br>9) Primeiro canal SWAP pela Wallet CoinOS<br>10) Acompanhamento de dever de casa</p>
+
+		<hr><p><h3>PASSO 1 - Lightning Watch</h3></p>
+<p>A primeira coisa que voc&ecirc; quer &eacute; saber, em tempo real, se o seu node est&aacute; on-line (ou n&atilde;o). Algu&eacute;m que o possa avisar, pelo Telegram, por exemplo Seria o ideal. Para isso existe o Lightning Watch Bot.</p>
+<p>Esta dica do Andreas Antonopoulos logo no inicio do seu livro &ldquo;Mastering the Lightning Network&rdquo;. &ldquo;Paz de esp&iacute;rito&rdquo;.</p>
+<p>Abra o site lightning.watch e siga as instru&ccedil;&otilde;es. Ser&aacute; perguntado se j&aacute; tem o Node, a sua Node Key ou URI e por ultimo &eacute; pedido para abrir um canal privado, para poderem fazer a monotoriza&ccedil;&atilde;o.</p>
+<p>Abra ent&atilde;o um canal de 20 mil Sats, PRIVADO, com o node deles e estabele&ccedil;a o bot no Telegram.</p>
+<p>Canais privados n&atilde;o s&atilde;o anunciados para a legi&atilde;o de nodes LN que, N&Atilde;O tentar&atilde;o rotear por este canal. Este canal n&atilde;o &eacute; pra servir de roteamento, &eacute; pra servir apenas de informa&ccedil;&atilde;o.</p>
+<p>Eis o seu node: (Contudo esta informa&ccedil;&atilde;o aparecer&aacute; na conversa do telegram)</p>
+<p><a href="https://1ml.com/node/03e691f81f08c56fa876cc4ef5c9e8b727bd682cf35605be25d48607a802526053" target="_blank">https://1ml.com/node/03e691f81f08c56fa876cc4ef5c9e8b727bd682cf35605be25d48607a802526053</a></p>
+<p>O Bot do TG avisar&aacute; com atraso de 30 mim se o seu Node ficar off-line ou, em tempo real, se voc&ecirc; pagar um valor em Sats:</p>
+<p><img src="imagens/precos-lw.jpg" class="img-fluid" style="max-width: 50%"></p>
+<p>E você pode ficar “pingando” o seu node através do bot pra saber se está tudo bem utilizando o comando “/list”.</p>
+<p><img src="imagens/list-lw.jpg" class="img-fluid" style="max-width: 50%"></p>
+<p>DICA: &nbsp;Utilize o comando &ldquo;/setgrace 2&rdquo; (min) para ele n&atilde;o te avisar sempre que h&aacute; qualquer glitch na internet ou na rede Tor!</p>
+<p>Veja um exemplo do que acontece quando seu node sai do ar por alguns minutos, por qualquer motivo:</p>
+<p><img src="imagens/offline-lw.jpg" class="img-fluid" style="max-width: 50%"></p>
+<p>Uma vez ou outra isso vai acontecer, n&atilde;o se preocupe. Problemas na Tor, na energia ou na internet.</p>
+<p>Se voc&ecirc; reiniciar o Raspi por algum motivo (atualiza&ccedil;&atilde;o, por exemplo), conseguir&aacute; ver em tempo real o Bot funcionando. &Eacute; muito bom.</p>
+		<hr><p><h3>PASSO 2 - Balance of Satoshis (BoS)</h3></p>
+<p>Outra coisa que queremos ver montada antes de abrir canais p&uacute;blicos &eacute; uma ferramenta que te fale TUDO que est&aacute; acontecendo no seu node:
+<br /><br />Abertura/fechamento de canal<br />Pagamentos/recebimentos<br />Roteamentos/Reabastecimentos<br /><br />E ainda fazer um backup sempre que algo mudar.</p>
+<p>O Backup &eacute; um arquivo de poucos bytes que voc&ecirc; precisar&aacute; para recuperar seus sats presos em canais LN no caso de voc&ecirc; ter algum problema. Raspi queimado, roubado, corrup&ccedil;&atilde;o de dados, enfim. Seed + backup e voc&ecirc; loga em uma outra inst&acirc;ncia e pronto: fundos recuperados.</p>
+<p>&Eacute; isso o que a &ldquo;Balance of Satoshis&rdquo; faz, do&nbsp;<a href="https://twitter.com/alexbosworth" target="_blank">@alexbosworth</a>&nbsp;.<br /><br />E o guia de instala&ccedil;&atilde;o dele &eacute; bem simples:<br /><br /><a href="https://github.com/alexbosworth/balanceofsatoshis" target="_blank">github.com/alexbosworth/balanceofsatoshis</a>
+<br /><br />A instala&ccedil;&atilde;o do Bot est&aacute; na mesma p&aacute;gina.<br /><br />&Eacute; este bot que manda estes pushs:</p>		
+<p><div class="container">
+    <div class="row">                                     
+        <div class="col-sm-4">                 
+            <img src="imagens/push1-bos.jpg" class="img-fluid" >
+        </div>                  
+        <div class="col-sm-8">
+            <img src="imagens/push2-bos.jpg" class="img-fluid" style="max-width: 50%">
+        </div>                  
+    </div>
+</div></p>
+<p>E &eacute; um bot que tamb&eacute;m pode me dar muita informa&ccedil;&atilde;o remotamente.</p>
+<p>A liquidez com algum canal e ainda os ganhos/custos&nbsp; na &uacute;ltima semana:</p>
+<p><div class="container">
+    <div class="row">                                     
+        <div class="col-sm-4">                 
+            <img src="imagens/push3-bos.jpg" class="img-fluid" >
+        </div>                  
+        <div class="col-sm-8">
+            <img src="imagens/push4-bos.jpg" class="img-fluid" style="max-width: 50%">
+        </div>                  
+    </div>
+</div></p>
+<p>Neste momento j&aacute; tem um canal com um node que tem um bot do Telegram (Lightning.Watch) que te avisa se ficar off-line.</p>
+<p>Voc&ecirc; j&aacute; instalou o BoS e j&aacute; est&aacute; 100% bem informado de tudo que se passa no seu node. J&aacute; recebe os Backups em tempo real, j&aacute; interage com ele &agrave;&nbsp;dist&acirc;ncia.</p>
+<p>Vamos seguir?</p>
+		<hr><p><h3>PASSO 3 - Watch Tower (WT)</h3></p>	
+<p>Voc&ecirc; precisa instalar uma WatchTower, que &eacute; literalmente um node que funcionar&aacute; como uma torre de controle pra voc&ecirc;. &Eacute; ele que vai agir em seu nome no caso de voc&ecirc; ficar off-line e algu&eacute;m tentar, propositalmente, ou n&atilde;o, roubar os fundos do canal que tem com voc&ecirc;.</p>
+<p>Uma das Watch Tower mais reconhecidas &eacute; a da <a href="https://twitter.com/BTC_LN" target="_blank">@BTC_LN</a> em parceria com a <a href="https://twitter.com/voltage_cloud" target="_blank">@voltage_cloud</a></p>
+<p>Pode encontrar o node deles abaixo. No passo 4 </p>
+<a href="https://lightningnetwork.plus/watchtower" target="_blank">lightningnetwork.plus/watchtower</a>
+		<hr><p><h3>PASSO 4 - LNDg</h3></p>
+<p>Voc&ecirc; vai instalar o LNDg, uma ferramenta do <a href="https://twitter.com/CryptoSharks131" target="_blank">@CryptoSharks131</a>, open source, com um grupo INCR&Iacute;VEL do Telegram.</p>
+<p><a href="https://t.me/+03YtC6VgBLQxYWYx" target="_blank">https://t.me/+03YtC6VgBLQxYWYx</a></p>
+<p>Voc&ecirc; vai fazer MUITA coisa pelo app dele MAS, por hora, vamos focar na seguran&ccedil;a de uma WT.</p>
+<p>Caso n&atilde;o utilize Umbrel instale o LNDg por aqui:</p>
+<p><a href="https://github.com/cryptosharks131/lndg" target="_blank">github.com/cryptosharks131/lndg</a></p>
+<p>No caso do Umbrel, simplesmente procure a aplica&ccedil;&atilde;o e instale.</p>
+<p>Dentro do app, n&atilde;o tem segredo: &eacute; clicar em &ldquo;Watchtower&rdquo; e introduzir o node da <br />WT indicado no passo anterior.</p>
+<p>Pronto, agora o node pode passar por um cataclisma com voc&ecirc; em f&eacute;rias na Cor&eacute;ia, que algu&eacute;m olhar&aacute; por voc&ecirc;.</p>
+<p>Tenha em mente o seguinte:</p>
+<p>De qualquer lugar do mundo voc&ecirc; pode acessar seu saldo on-chain ou acessar um node Lightning (rodando o LND), para fazer o processo de recupera&ccedil;&atilde;o e ter tudo de novo s&atilde;o e salvo.</p>
+<p>Para quem usa Umbrel, um guia pra voc&ecirc; guardar &eacute; esse aqui:</p>
+<p><a href="https://community.getumbrel.com/t/how-to-restore-your-node-wallet/3602" target="_blank">https://community.getumbrel.com/t/how-to-restore-your-node-wallet/3602</a></p>
+<p>Para qualquer outra implementa&ccedil;&atilde;o que use o LND, esse link ajuda:</p>
+<p><a href="https://docs.lightning.engineering/lightning-network-tools/lnd/disaster-recovery" target="_blank">https://docs.lightning.engineering/lightning-network-tools/lnd/disaster-recovery</a></p>
+<p>Respire fundo, tudo vai dar certo. Basta seed + backup.</p>
+<p>Eu j&aacute; tomei v&aacute;rios sustos e achei que n&atilde;o fosse ver meus sats de volta. Natural de qualquer tecnologia nova.</p>
+<p>Mas sempre os recuperei no final, s&oacute; para perceber que o medo nunca foi justificado. Eu &eacute; que n&atilde;o tinha intimidade com a tecnologia que, agora, eu passo pra voc&ecirc;s.</p>
+<p>Uma refer&ecirc;ncia legal de de tutoriais &eacute; o Substack do Darth Coin. J&aacute; me ajudou MUITO:</p>
+<p><a href="https://darthcoin.substack.com" target="_blank">https://darthcoin.substack.com/</a></p>
+		<hr><p><h3>PASSO 5 - Nome ao Node</h3></p>
+<p>Para dar um nome ao seu node: SSH nele (No terminal):</p>
+<p><strong>ssh -t umbrel@umbrel.local</strong></p>
+<p>A senha, se voc&ecirc; n&atilde;o tiver mudado, &eacute; moneyprintergobrrr (Pra mudar a senha &eacute; s&oacute; digitar passwd)</p>
+<p>Abra o arquivo de configura&ccedil;&atilde;o lnd.conf</p>
+<p><strong>(Umbrel &lt; 0.4) sudo Nano umbrel/lnd/lnd.conf</strong></p>
+<p><strong>(Umbrel &gt;= 0.5) sudo nano ~/umbrel/app-data/lightning/data/lnd/lnd.conf</strong></p>
+<p>Vai abrir uma tela de edi&ccedil;&atilde;o.</p>
+<p><strong>CUIDADO COM ESSA TELA</strong> Qualquer espa&ccedil;o errado e seu node n&atilde;o &ldquo;carrega&rdquo; normalmente!</p>
+<p>Eu j&aacute; fiz isso e n&atilde;o &eacute; legal. Voc&ecirc; tem que procurar depois onde est&aacute; o errinho, por qualquer que seja.</p>
+<p>Dentro do bloco [Applications Options], adicione:</p>
+<p><strong>alias=NOMEDOSEUNODE</strong></p>
+<p>Pronto. F&aacute;cil achar.</p>
+		<hr><p><h3>PASSO 6 - Novos fees padr&atilde;o</h3></p>
+<p>AINDA NESSE ARQUIVO:</p>
+<p>No par&aacute;grafo [Bitcoin], voc&ecirc; deve procurar por:</p>
+<p><strong>bitcoin.basefee=0</strong></p>
+<p>Assim, voc&ecirc; n&atilde;o cobrar&aacute; custo FIXO pelo roteamento. Isso &eacute; bom pra alguns rankings;</p>
+<p><strong> bitcoin.feerate=500</strong></p>
+<p>Significa custo VARI&Aacute;VEL de 500 sats pra cada 1 milh&atilde;o de sats que voc&ecirc; rotear.</p>
+<p>500, na minha experi&ecirc;ncia, &eacute; um bom valor default pois, de todos os canais que roteiam, os meus giram de 100 a 1000ppm. Com esses valores novos (ao inv&eacute;s do 1ppm e 1 sat fixo padr&atilde;o), voc&ecirc; n&atilde;o corre o risco de ver o seu canal drenado logo no in&iacute;cio (para depois reabastecer no preju&iacute;zo).</p>
+<p>Como o canal leva 3 confirma&ccedil;&otilde;es pra ser aberto, ent&atilde;o voc&ecirc; pode abrir e ir dormir tranquilo. Se os valores forem altos demais, voc&ecirc; n&atilde;o ir&aacute; rotear nada e poder&aacute; baixa-los. O contr&aacute;rio tamb&eacute;m &eacute; verdade.</p>
+<p>De volta ao par&aacute;grafo [Applications Options] no mesmo arquivo lnd.conf</p>
+		<hr><p><h3>PASSO 7 - Tamanho m&iacute;nimo de canal</h3></p>
+<p>Vamos definir tamanho m&iacute;nimo de canais pra abrirem com voc&ecirc;. Isso pode ser bom se voc&ecirc; j&aacute; tem um planejamento de abrir canais, por exemplo, de 2-4MM de sats e n&atilde;o querer canais muito menores que isso.</p>
+<p>Canais muito menores podem acabar &ldquo;congestionando&rdquo; o fluxo no seu node, por funcionarem como uma esp&eacute;cie de gargalo. Imagine uma estrada que, em uma ponta, tem 10 pistas e, na outra, tem uma pista s&oacute;.</p>
+<p><strong>minchansize=1000000</strong> (1 milh&atilde;o de sats)</p>
+<p>Se voc&ecirc; quiser botar pra f@der</p>
+<p><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">Ative os canais WUMBO (maiores que 16MM de sats):</span></p>
+<p><strong><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">protocol.wumbo-channels=true</span></strong></p>
+		<hr><p><h3>PASSO 8 - Registrar Node no 1ml e no Amboss</h3></p>
+<p>Pronto. Chegou a hora de marcar territ&oacute;rio. Fale um pouco mais de voc&ecirc; em quem quiser procur&aacute;-lo pela&nbsp;<a href="https://twitter.com/ambosstech" target="_blank">@ambosstech</a> ou pela 1ml.</p>
+<p>Fale da sua estrat&eacute;gia, seu setup. Passa seguran&ccedil;a. Pode aumentaras aberturas de canais com voc&ecirc;.</p>
+<p>V&aacute; ao site <a href="http://1ml.com" target="_blank">http://1ml.com</a>, procure seu node (agora pelo nome 😊), e v&aacute; em &ldquo;Claim Node&rdquo;.</p>
+<p>Voc&ecirc; deve ver uma tela parecida com a tela abaixo, mas com os seus dados.</p>
+<p><img src="imagens/1ml.jpg" class="img-fluid"></p>
+<p>Voc&ecirc; dever&aacute; abrir um canal com eles de valor ESPEC&Iacute;FICO, pra que eles saibam que &eacute; voc&ecirc; mesmo. Voc&ecirc; deve primeiro abrir conta com eles pelo site.</p>
+<p>Agora, na <a href="https://amboss.space/"  target="_blank">amboss.space</a> eles t&ecirc;m uma linda interface que conquistou todos os noderunners. Hoje, na verdade, j&aacute; &eacute; o lugar n&uacute;mero 1 para consultas.</p>
+<p>O registro com eles &eacute; diferente: Voc&ecirc; precisa assinar uma mensagem com o seu node.</p>
+<p>Como? Voc&ecirc; vai procurar o seu node na plataforma e ir em login.</p>
+<p><a href="https://docs.amboss.space/space/login/"  target="_blank">docs.amboss.space/space/login</a></p>
+<p>Voc&ecirc; vai instalar o <a href="https://twitter.com/RTL_App"  target="_blank">@RTL_App</a> no seu node e utilizar a op&ccedil;&atilde;o &ldquo;assinar mensagem&rdquo;.</p>
+<p>Eis o site do Ride The Lightning (RTL): <a href="https://ridethelightning.info" target="_blank">https://ridethelightning.info</a></p>
+<p>Pra voc&ecirc; instala-lo em qualquer lugar. Na Umbrel, eles tem app, claro.</p>
+		<hr><p><h3>PASSO 9 - Primeiro canal SWAP pela Wallet CoinOS</h3></p>
+<p>Voce vai abrir um canal com a <a href="https://twitter.com/coinoswallet" target="_blank">@coinoswallet</a>, com a <a href="https://twitter.com/usebipa" target="_blank">@usebipa</a> ou com a <a href="https://twitter.com/walletofsatoshi" target="_blank">@walletofsatoshi</a> e fazer o que chamamos de SWAP.</p>
+<p>Assim que abrir qualquer um desses canais, voc&ecirc; vai enviar toda a quantia para um endere&ccedil;o que voc&ecirc; CONTROLE, aberto com eles.</p>
+<p>Ou seja: Voc&ecirc; vai gerar uma invoice PARA VOC&Ecirc;, a partir da CoinOS, WoS ou Bipa, e PAGAR com o seu node que, agora, tem um canal aberto com eles.</p>
+<p>Voc&ecirc; est&aacute; enviando seus sats para o node deles.</p>
+<p>Porque? Porque agora, do node deles, voc&ecirc; enviar&aacute; para o seu node ON-CHAIN!</p>
+<p>O que voc&ecirc; fez foi, basicamente, criar capacidade de recebimento.</p>
+<p>Quando voc&ecirc; paga a invoice que voc&ecirc; mesmo criou, os sats do canal que voc&ecirc; abriu v&atilde;o para o lado deles e, portanto, podem ser usados para te pagar.</p>
+<p>Ao mesmo tempo, esses sats est&atilde;o de volta na carteira do seu node e voc&ecirc; poder&aacute; abrir com eles novos canais.</p>
+<p>Ex: com 10 milh&otilde;es de sats, voc&ecirc; pode abrir 3 canais de 10 milh&otilde;es com eles e ainda ficar com 10 milh&otilde;es de sats na conta! Como assim?</p>
+<p>Abre canal de 10M com a CoinOS -&gt; manda pra sua conta na CoinOS pela LN -&gt; traz de volta on-chain</p>
+<p>Abre canal de 10M com a WOS -&gt; manda pra sua conta na WoS pela LN -&gt; traz de volta on-chain</p>
+<p>Abre canal de 10M com a Bipa -&gt; manda pra sua conta na Bipa pela LN -&gt; traz de volta on-chain</p>
+<p>Voc&ecirc; agora pode RECEBER, por tr&ecirc;s canais diferentes, 10MM em cada, e ainda tem 10MM na conta</p>
+<p>(Voc&ecirc; tem que abater os fees de transa&ccedil;&atilde;o, obvio)</p>
+		<hr><p><h3>PASSO 10 - Acompanhamento de dever de casa</h3></p>           
+<p>Voc&ecirc; cumpriu esse checklist e est&aacute; com a mente tranquila por ter o controle total do seu node. Voc&ecirc; sabe que, mesmo que tudo d&ecirc; errado, de um computador por perto voc&ecirc; pode recuperar tudo.</p>
+<p>Voc&ecirc; tem not&iacute;cias de tudo o que acontece no seu node em tempo real e, na d&uacute;vida, pode at&eacute; perguntar pra ele. Voc&ecirc; pode conversar com o seu node!</p>
+<p>E agora?</p>
+<p>Agora, voc&ecirc; vai ver a m&aacute;gica acontecer. Vai ver os pagamentos sendo roteados, seus canais expedidores sendo drenados e os seus inbounders ficando cheios.</p>
+<p>Voc&ecirc; vai querer reabastec&ecirc;-los lucrativamente.</p>
+<p>Voc&ecirc; vai setar seus par&acirc;metros de lucratividade no LNDg (e muitos outros par&acirc;metros) e ver como eles reagem.</p>
+<p>Voc&ecirc; vai interagir com o seu node e ver o que funciona ou n&atilde;o.</p>
+<p>Voc&ecirc; vai ver se os canais com os quais abriu s&atilde;o bons ou n&atilde;o, se roteiam bem ou n&atilde;o e etc.</p>
+<p>Seu node ser&aacute; capaz de te sugerir novas conex&otilde;es. E assim voc&ecirc; vai mexendo, testando, abrindo, fechando canais e aprendendo.</p>
+<p>Quem sabe daqui a algum tempo n&atilde;o est&aacute; ensinando tamb&eacute;m?</p>
+<p>As coisas est&atilde;o andando muito r&aacute;pido.</p>
+<p>Muita coisa j&aacute; foi automatizada desde que comecei.</p>
+<p>Os fees, os rebalanceamentos, a defini&ccedil;&atilde;o do quanto quero ter de margem, tudo isso hoje &eacute; autom&aacute;tico e meu node trabalha muito mais sozinho do que comigo.</p>
+<p>Eu cuido dele uma vez por dia e olhe l&aacute;, como um Tamagochi que me deixa quase todos os dias uns satoshinhos ao rotear pagamentos no mundo todo.</p>
+<p>E a maior parte do que fa&ccedil;o &eacute; pelo LNDg, cujo tutorial em video pode ver abaixo (Ing&ecirc;s):</p>
+<p><a href="https://www.youtube.com/watch?v=e1ZGy-WaUnE" target="_blank">https://www.youtube.com/watch?v=e1ZGy-WaUnE</a></p>
+		<hr><p><h3>FIM</h3></p>
+<p>Salve esta p&aacute;gina para o dia que voc&ecirc; come&ccedil;ar nessa revolu&ccedil;&atilde;o onde voc&ecirc; pode ser totalmente <strong>INDEPENDENTE</strong> e ainda ajudar a construir uma nova Web:</p>
+<p>A Web do dinheiro.</p> 
+
+        </section>
+
+        <footer>
+            <p>&copy; Satoshi 2008</p>
+        </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+
+    <!-- Tether -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+
+    <!-- Initialize Bootstrap functionality -->
+    <script>
+    // Initialize tooltip component
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // Initialize popover component
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    </script>    
+
+  </body>
+</html>
